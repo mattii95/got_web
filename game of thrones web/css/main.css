@@ -1,0 +1,620 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 300;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+/* NAVEGACION */
+.navbar{
+display: flex;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #ffffff;
+  z-index: 10000;
+  height: 75px;
+  
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 4px 30px;
+}
+
+.nav-main {
+  font-size: 1.1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 20px 0;
+}
+
+.nav-brand {
+  width: 100px;
+}
+
+.nav-main ul {
+  display: flex;
+}
+
+.nav-main ul li {
+  padding: 10px;
+}
+
+
+
+.nav-main ul li a:hover {
+  font-weight: 400;
+  border-bottom: 3px solid #006d92;
+}
+/* banner */
+.banner {
+  width: 100%;
+  background: #272727;
+  height: 550px;
+  display: flex;
+}
+
+.banner > .container > .iframe-responsive{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 100%;
+    margin-top: 70px;
+}
+
+.banner > .container > .iframe-responsive > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 500px;
+}
+
+/* SEASONS CARDS */
+.seasons {
+  padding-top: 55px;
+}
+
+.seasons-title > h2 {
+  font-size: 2.5em;
+  font-weight: 700;
+  text-align: center;
+}
+
+.seasons-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  margin: 10px 0;
+}
+
+.seasons-cards .card {
+  box-shadow: 2px 3px 5px #888888;
+}
+
+.seasons-cards .card:hover {
+  cursor: pointer;
+  box-shadow: 0 0 5px #000000;
+}
+
+.seasons-cards img {
+  width: 100%;
+  height: 180px;
+}
+
+.seasons-cards h3 {
+  padding: 10px 0 5px;
+  font-size: 1em;
+  font-weight: 300;
+  text-align: center;
+}
+
+.seasons-cards p {
+  padding: 5px 0 10px;
+  font-size: 2.5em;
+  font-weight: 300;
+  text-align: center;
+}
+
+.seasons-banner {
+  width: 100%;
+  height: 400px;
+  margin: 20px 0;
+  background: url("../images/bg-season-banner.jpg") no-repeat top center/cover;
+}
+
+/* CAST */
+.cast {
+  background: linear-gradient(rgb(241, 241, 241), rgb(241, 241, 241));
+}
+
+.cast-cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  margin: 10px 0;
+}
+
+.cast-title h2 {
+  font-size: 2.5em;
+  font-weight: 700;
+  padding: 10px 0 15px;
+  text-align: center;
+}
+
+.cast-cards div {
+  text-align: center;
+}
+
+.cast-cards .cast-img-circular {
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.cast-cards .cast-img-circular img {
+  width: auto;
+  height: 100%;
+  margin-left: -75px;
+}
+
+.cast-cards div h3 {
+  padding: 10px 0 5px;
+  font-size: 1.5em;
+  font-weight: 400;
+  color: #3f3f3f;
+}
+
+.cast-cards div h3:hover {
+  display: inline-block;
+  cursor: pointer;
+  color: #000000;
+  border-bottom: 2px solid #2f2f2f;
+}
+
+.cast-cards div p {
+  padding: 5px 0 10px;
+  font-size: 1em;
+  font-weight: 300;
+}
+
+.cast-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cast-button a {
+  text-transform: uppercase;
+  margin: 40px 0;
+  font-weight: 400;
+  color: #ffffff;
+  padding: 10px 50px;
+  border-radius: 5px;
+  background: #2bb0d8;
+}
+
+.cast-button a:hover {
+  background: #2497b9;
+}
+
+/* BLOG */
+.blog {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  margin: 50px 0;
+}
+.blog-content {
+  position: relative;
+  width: 100%;
+}
+
+.blog-content .blog-text {
+  position: absolute;
+  background: #ffffff;
+  width: 500px;
+  height: 350px;
+  top: 25px;
+  right: 55%;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 4px 15px;
+}
+
+.blog-content .blog-text h2 {
+  padding: 50px 30px 20px;
+  text-align: center;
+}
+
+.blog-content .blog-text p {
+  padding: 0 30px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.blog-content .blog-text a {
+  display: block;
+  text-align: center;
+  padding: 20px 0;
+  text-transform: uppercase;
+  font-size: 0.9em;
+  font-weight: 700;
+  color: #2497b9;
+}
+
+.blog-content .blog-text a:hover {
+  color: #006d92;
+}
+
+.blog-content .blog-text .blog-cartel {
+  display: inline-block;
+  background: #2bb0d8;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 300;
+  font-size: 0.9em;
+  position: relative;
+  top: -13px;
+  left: 40%;
+}
+
+.blog-content .blog-image img {
+  position: relative;
+  width: auto;
+  height: 400px;
+  left: 40%;
+}
+.blog-content hr{
+    margin: 10px 8% 0;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.blog-list-news{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+  margin: 25px 0;
+}
+
+.blog-list-news .card-news img{
+    width: 100%;
+    height: 180px;
+}
+.blog-list-news .card-news h3{
+    color: #272727;
+    margin: 15px 0 10px;
+}
+.blog-list-news .card-news p{
+    font-weight: 300;
+    margin: 10px 0 10px;
+}
+.blog-list-news .card-news a{
+    display: block;
+    color: #2497b9;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+.blog-list-news .card-news hr{
+    margin-top: 10px;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/* footer */
+.footer{
+    background: #404040;
+    padding: 30px 0;
+}
+
+.footer .footer-redes{
+    text-align: center;
+    color: #ffffff;
+}
+
+.footer .footer-redes h3{
+    text-transform: uppercase;
+}
+
+.footer .footer-redes ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 25px;
+}
+
+.footer .footer-redes ul li {
+    padding: 0 10px;
+    font-size: 1.5em;
+}
+
+.footer .footer-redes ul li a{
+    display: flex;
+    background: #2497b9;
+    color: #ffffff;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer .footer-redes ul li a:hover{
+    background: #006d92;
+}
+
+
+/* media queris */
+
+@media(max-width: 700px){
+
+    .navbar{
+        
+    }
+    .navbar .nav-main .nav-menu-right{
+        display: none;
+    }
+    .navbar .nav-main ul.nav-menu{
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        background: #3f3f3f;
+        padding: 20px;
+        opacity: 0.9;
+        z-index: 12000;
+        transform: translateX(-200px);
+        transition: transform .5s ease-in-out;
+    }
+    .navbar .nav-main ul.nav-menu.show{
+        transform: translateX(0);
+    }
+    .navbar .nav-main ul.nav-menu li a{
+        color: #ffffff;
+        font-size: 14px;
+    }
+
+    .bg-boton .menu-boton{
+        position: fixed;
+        cursor: pointer;
+        top: 25px;
+        right: 30px;
+        font-size: 1.5em;
+        color: #000000;
+        z-index: 15000;
+    }
+
+
+    /* BANNER */
+
+    .banner{
+        height: 350px;
+    }
+
+    .banner > .container > .iframe-responsive{
+        padding-top: 50%;
+    }
+    .banner > .container > .iframe-responsive > iframe {
+        height: 300px;
+    }
+
+
+    /* SEASONS */
+
+    .seasons-cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .seasons-banner{
+        height: 200px;
+    }
+
+    /* CAST */
+    .cast-cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* blog */
+    .blog-content .blog-text{
+        right: 0;
+        width: 300px;
+        height: 200px;
+    }
+    .blog-content .blog-text h2 {
+        padding: 10px 5px 10px;
+        font-size: 1em;
+      }
+      
+      .blog-content .blog-text p {
+        padding: 0 5px;
+        font-size: 0.8em;
+      }
+      
+      .blog-content .blog-text a {
+        display: block;
+        text-align: center;
+        padding: 20px 0;
+        text-transform: uppercase;
+        font-size: 0.9em;
+        font-weight: 700;
+        color: #2497b9;
+      }
+      .blog-content .blog-text .blog-cartel{
+          left: 30%;
+      }
+    
+    .blog-content .blog-image img {
+        height: 250px;
+        left: 0%;
+      }
+
+    .blog-list-news{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media(max-width: 520px){
+    /* BANNER */
+    .banner{
+        height: 300px;
+    }
+
+    .banner > .container > .iframe-responsive{
+        padding-top: 100%;
+    }
+    .banner > .container > .iframe-responsive > iframe {
+        height: 250px;
+    }
+
+    /* SEASONS */
+
+    .seasons-cards{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .seasons-title > h2{
+        font-size: 1.5em;
+    }
+
+    .seasons-banner{
+        height: 200px;
+    }
+    .seasons-cards img {
+        height: 250px;
+      }
+
+    /* CAST */
+    .cast-title h2{
+        font-size: 1.5em;
+    }
+    .cast-cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .cast-cards .cast-img-circular{
+        height: 150px;
+        width: 150px;
+    }
+    .cast-cards .cast-img-circular img {
+        margin-left: -45px;
+      }
+      
+      .cast-cards div h3 {
+        padding: 10px 0 5px;
+        font-size: 1em;
+      }
+      
+      .cast-cards div p {
+        padding: 5px 0 10px;
+        font-size: 1em;
+        font-weight: 300;
+      }
+
+
+    /* blog */
+    .blog-content{
+        display: none;
+    }
+
+    .blog-list-news{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .blog-list-news .card-news img{
+        width: 100%;
+        height: 200px;
+    }
+}
+@media(max-width: 375px){
+    /* BANNER */
+    .banner{
+        height: 200px;
+    }
+
+    .banner > .container > .iframe-responsive{
+        padding-top: 66.66%;
+    }
+    .banner > .container > .iframe-responsive > iframe {
+        height: 150px;
+    }
+
+    /* SEASONS */
+
+    .seasons-cards{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .seasons-title > h2{
+        font-size: 1.5em;
+    }
+
+    .seasons-banner{
+        height: 200px;
+    }
+    .seasons-cards img {
+        height: 150px;
+      }
+
+    /* CAST */
+    .cast-title h2{
+        font-size: 1.5em;
+    }
+    .cast-cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .cast-cards .cast-img-circular{
+        height: 150px;
+        width: 150px;
+    }
+    .cast-cards .cast-img-circular img {
+        margin-left: -45px;
+      }
+      
+      .cast-cards div h3 {
+        padding: 10px 0 5px;
+        font-size: 1em;
+      }
+      
+      .cast-cards div p {
+        padding: 5px 0 10px;
+        font-size: 1em;
+        font-weight: 300;
+      }
+
+
+    /* blog */
+    .blog-content{
+        display: none;
+    }
+
+    .blog-list-news{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .blog-list-news .card-news img{
+        width: 100%;
+        height: 200px;
+    }
+}
